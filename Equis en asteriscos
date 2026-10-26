@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 5; // Tamaño de la matriz (idealmente impar)
+    
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            // Si es la diagonal principal (i == j) o la secundaria (i + j == n + 1)
+            if (i == j || i + j == n + 1) {
+                cout << "* ";
+            } else {
+                cout << "  "; // Espacios vacíos
+            }
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
