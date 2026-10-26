@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double s = 0;
+    int n = 5;
+    int sw = 0; // Bandera para alternar signos (0 para sumar, 1 para restar)
+    
+    for (int i = 1; i <= n; i++) {
+        // Numerador 'i' y denominador 'i + 1' (ej: 1/2, 2/3, 3/4...)
+        double termino = (double)i / (i + 1);
+        
+        if (sw == 0) {
+            s = s + termino; // Si la bandera es 0, suma
+            sw = 1;          // Cambia la bandera a 1
+        } else {
+            s = s - termino; // Si la bandera es 1, resta
+            sw = 0;          // Cambia la bandera a 0
+        }
+    }
+    
+    cout << "El resultado de la serie es: " << s << endl;
+    return 0;
+}
