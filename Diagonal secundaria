@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 4; // Tamaño de la matriz
+    
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            // La condición para la diagonal secundaria es que la suma de fila + columna sea igual a n + 1
+            if (i + j == n + 1) {
+                cout << "* ";
+            } else {
+                cout << "  "; // Espacios vacíos
+            }
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
