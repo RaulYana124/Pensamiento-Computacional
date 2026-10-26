@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 4; // Tamaño de la matriz
+    
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            // Si la fila es igual a la columna, dibuja el asterisco
+            if (i == j) {
+                cout << "* ";
+            } else {
+                cout << "  "; // Espacios vacíos fuera de la diagonal
+            }
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
