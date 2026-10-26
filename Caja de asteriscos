@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 5; // Tamaño de la matriz
+    
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            // Si está en el borde superior, inferior, izquierdo o derecho
+            if (i == 1 || i == n || j == 1 || j == n) {
+                cout << "* ";
+            } else {
+                cout << "  "; // Espacio vacío en el centro
+            }
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
